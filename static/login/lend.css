@@ -254,4 +254,18 @@ body[data-theme="dark"] .lend-paid-btn {
   .lend-amount {
     font-size: 0.82rem;
   }
+
+  .lend-summary-amount {
+    font-size: 1.3rem;
+  }
+
+  .lend-summary-grid {
+    gap: 10px;
+  }
+
+  .lend-add-btn {
+    width: 100%;
+    justify-content: center;
+    height: 38px;
+  }
 }

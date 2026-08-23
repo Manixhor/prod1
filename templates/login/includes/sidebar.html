@@ -131,4 +131,13 @@
       button.addEventListener('click', () => applyTheme(button.dataset.themeValue, true, button));
     });
   })();
+
+  // Logout confirmation
+  document.querySelectorAll('form.logout-form').forEach((form) => {
+    form.addEventListener('submit', (e) => {
+      if (!confirm('Are you sure you want to log out?')) {
+        e.preventDefault();
+      }
+    });
+  });
 </script>

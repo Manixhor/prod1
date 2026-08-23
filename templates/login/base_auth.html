@@ -36,5 +36,10 @@
   </div>
   {% block scripts %}{% endblock %}
   <script src="{% static 'login/auth_enter.js' %}" defer></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(() => {});
+    }
+  </script>
 </body>
 </html>

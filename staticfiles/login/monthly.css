@@ -1057,8 +1057,8 @@ body[data-theme="dark"] .ma-reminder-btn:hover {
 
   .ma-balance-amount { font-size: 1.6rem; }
 
-  .month-selector { padding: 4px 8px; }
-  .month-label    { font-size: 0.80rem; min-width: 90px; }
+  .month-selector { padding: 4px 8px; gap: 6px; }
+  .month-label    { font-size: 0.80rem; min-width: 90px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
   .ma-reminder-card { flex-direction: column; align-items: flex-start; gap: 10px; }
   .ma-reminder-btn  { width: 100%; text-align: center; }

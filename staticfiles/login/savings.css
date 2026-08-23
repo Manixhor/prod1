@@ -96,8 +96,16 @@
 }
 
 .alloc-value.available {
-  color: var(--positive);
+  color: var(--muted);
   font-size: 1rem;
+}
+
+.alloc-value.available.is-negative {
+  color: var(--negative);
+}
+
+.alloc-value.available.is-positive {
+  color: var(--positive);
 }
 
 .allocation-breakdown {
@@ -904,6 +912,9 @@ body[data-theme="dark"] .sv-contribute-btn:hover {
   .sv-banner-amount { font-size: 1.35rem; }
   .sv-goal-name     { font-size: 0.88rem; }
   .sv-amt-val       { font-size: 0.78rem; }
+  .sv-amt-row       { gap: 6px; }
+  .sv-amt-label     { font-size: 0.66rem; }
+  .sv-amt-val       { word-break: break-word; }
 }
 
 /* ── Savings Motivation Card ────────────────────────────── */

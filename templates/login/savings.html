@@ -471,5 +471,10 @@ if (refreshMotivationBtn) {
 </script>
 {% include "login/includes/expense_chatbot.html" %}
 <script src="{% static 'login/currency_sync.js' %}" defer></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js').catch(() => {});
+  }
+</script>
 </body>
 </html>

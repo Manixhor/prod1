@@ -912,6 +912,9 @@ body[data-theme="dark"] .sv-contribute-btn:hover {
   .sv-banner-amount { font-size: 1.35rem; }
   .sv-goal-name     { font-size: 0.88rem; }
   .sv-amt-val       { font-size: 0.78rem; }
+  .sv-amt-row       { gap: 6px; }
+  .sv-amt-label     { font-size: 0.66rem; }
+  .sv-amt-val       { word-break: break-word; }
 }
 
 /* ── Savings Motivation Card ────────────────────────────── */

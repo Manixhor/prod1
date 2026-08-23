@@ -1940,8 +1940,8 @@ body[data-theme="dark"] .txn-icon.lend {
   .sidebar {
     flex-direction: row;
     width: 100%;
-    height: 64px;
-    padding: 0 16px;
+    height: calc(64px + env(safe-area-inset-top, 0px));
+    padding: env(safe-area-inset-top, 0px) 16px 0;
     gap: 0;
     justify-content: space-between;
     align-items: center;
@@ -1951,6 +1951,9 @@ body[data-theme="dark"] .txn-icon.lend {
     position: sticky;
     top: 0;
     z-index: 100;
+    background: var(--glass);
+    backdrop-filter: blur(20px) saturate(1.8);
+    -webkit-backdrop-filter: blur(20px) saturate(1.8);
   }
 
   .avatar-wrap {
@@ -1972,6 +1975,24 @@ body[data-theme="dark"] .txn-icon.lend {
   .nav-icon {
     width: 38px;
     height: 44px;
+    position: relative;
+  }
+
+  /* Active indicator dot under nav icon */
+  .nav-icon.active::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 18px;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--accent);
+  }
+
+  body[data-theme="dark"] .nav-icon.active::after {
+    background: #a78bfa;
   }
 
   .sidebar-theme {
@@ -2522,6 +2543,26 @@ body[data-theme="dark"] .txn-icon.lend {
 
   .insight-stock-amount {
     font-size: 1.4rem;
+  }
+
+  /* Narrow screen overflow fixes */
+  .balance-amount {
+    font-size: 1.2rem;
+    word-break: break-word;
+  }
+
+  .ec-title {
+    max-width: 130px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .txn-name {
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
